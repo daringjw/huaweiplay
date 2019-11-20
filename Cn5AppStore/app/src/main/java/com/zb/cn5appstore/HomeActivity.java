@@ -75,16 +75,16 @@ public class HomeActivity extends BaseActivity {
         tabLayout.setupWithViewPager(mainViewPager);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
 
-        mainViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
+        mainViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
 
-                if (position ==0){
-                    RecommendFragment fragment = (RecommendFragment) FragmentFactory.createFragment(position);
-                    fragment.show();
 
-                }
+                BaseFragment fragment = FragmentFactory.createFragment(position);
+                fragment.show();
+
+
             }
         });
 

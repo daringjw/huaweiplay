@@ -1,12 +1,10 @@
 package com.zb.cn5appstore.fragment;
 
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.os.SystemClock;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.TextView;
 
-import com.zb.cn5appstore.R;
 import com.zb.cn5appstore.base.BaseFragment;
 
 /**
@@ -17,11 +15,22 @@ public class TopFragment extends BaseFragment{
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_top, container, false);
+    protected void load() {
+        //网络请求操作
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                SystemClock.sleep(2000);
+                setState(LoadResult.success);
+            }
+        }).start();
+    }
 
+    @Override
+    protected View createSuccessView() {
+        TextView textView = new TextView(getContext());
+        textView.setText("推荐加载成功");
+        return textView;
     }
 
 
