@@ -1,4 +1,4 @@
-package com.zb.cn5appstore.fragment;
+package com.zb.cn5appstore.mvp.view.fragment;
 
 
 import android.os.SystemClock;
@@ -12,7 +12,7 @@ import com.zb.cn5appstore.view.LoadingPager;
  * Created by VULCAN on 2019/11/17.
  */
 
-public class CategoryFragment extends BaseFragment{
+public class TopFragment extends BaseFragment{
 
 
     @Override
@@ -22,8 +22,7 @@ public class CategoryFragment extends BaseFragment{
             @Override
             public void run() {
                 SystemClock.sleep(2000);
-
-                setState(LoadingPager.LoadResult.error);
+                setState(LoadingPager.LoadResult.success);
             }
         }).start();
     }

@@ -1,9 +1,7 @@
-package com.zb.cn5appstore.fragment;
+package com.zb.cn5appstore.mvp.view.fragment;
 
 
-import android.os.Bundle;
 import android.os.SystemClock;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
@@ -11,16 +9,11 @@ import com.zb.cn5appstore.base.BaseFragment;
 import com.zb.cn5appstore.view.LoadingPager;
 
 /**
- * Created by GuanJunwei on 2019/11/17.
+ * Created by VULCAN on 2019/11/17.
  */
 
-public class RecommendFragment extends BaseFragment {
+public class MyFragment extends BaseFragment{
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        show();
-    }
 
     @Override
     protected void load() {

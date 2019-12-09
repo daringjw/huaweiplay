@@ -15,6 +15,7 @@ public abstract class BaseFragment extends Fragment {
 
     private LoadingPager loadingPager;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

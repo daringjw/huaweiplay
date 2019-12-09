@@ -12,6 +12,8 @@ import android.support.v4.content.PermissionChecker;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
+import com.zb.cn5appstore.mvp.view.activity.HomeActivity;
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 

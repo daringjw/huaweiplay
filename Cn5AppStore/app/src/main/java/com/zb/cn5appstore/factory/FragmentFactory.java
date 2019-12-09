@@ -2,11 +2,11 @@ package com.zb.cn5appstore.factory;
 
 
 import com.zb.cn5appstore.base.BaseFragment;
-import com.zb.cn5appstore.fragment.AppManagerFragment;
-import com.zb.cn5appstore.fragment.CategoryFragment;
-import com.zb.cn5appstore.fragment.MyFragment;
-import com.zb.cn5appstore.fragment.RecommendFragment;
-import com.zb.cn5appstore.fragment.TopFragment;
+import com.zb.cn5appstore.mvp.view.fragment.AppManagerFragment;
+import com.zb.cn5appstore.mvp.view.fragment.CategoryFragment;
+import com.zb.cn5appstore.mvp.view.fragment.MyFragment;
+import com.zb.cn5appstore.mvp.view.fragment.RecommendFragment;
+import com.zb.cn5appstore.mvp.view.fragment.TopFragment;
 
 import java.util.HashMap;
 import java.util.Map;

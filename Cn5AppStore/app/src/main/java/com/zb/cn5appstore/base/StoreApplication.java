@@ -3,6 +3,9 @@ package com.zb.cn5appstore.base;
 import android.os.Handler;
 
 import com.zb.cn5appstore.App;
+import com.zb.cn5appstore.di.component.AppComponent;
+import com.zb.cn5appstore.di.component.DaggerAppComponent;
+import com.zb.cn5appstore.di.module.ApplicationModule;
 
 
 /**
@@ -15,6 +18,7 @@ public class StoreApplication extends App {
 
     private static int mMainThreadId;
     private static Handler mHandler;
+    private AppComponent mAppComponent;
 
 
     @Override
@@ -22,10 +26,22 @@ public class StoreApplication extends App {
         super.onCreate();
 
         mHandler = new Handler();
+        initApplicationComponent();
 
 
     }
 
+    private void initApplicationComponent(){
+
+        mAppComponent = DaggerAppComponent.builder()
+                .applicationModule(new ApplicationModule(this)).build();
+
+    }
+
+    public AppComponent getAppComponent(){
+
+        return  mAppComponent;
+    }
 
     /**
      * 返回主线程的pid

@@ -1,18 +1,16 @@
-package com.zb.cn5appstore;
+package com.zb.cn5appstore.mvp.view.activity;
 
 import android.os.Build;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.widget.LinearLayout;
 
+import com.zb.cn5appstore.R;
 import com.zb.cn5appstore.adapter.FixPagerAdapter;
 import com.zb.cn5appstore.base.BaseActivity;
 import com.zb.cn5appstore.base.BaseFragment;
 import com.zb.cn5appstore.factory.FragmentFactory;
-import com.zb.cn5appstore.fragment.RecommendFragment;
 
 import java.util.ArrayList;
 import java.util.List;
